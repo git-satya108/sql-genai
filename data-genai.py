@@ -4,7 +4,6 @@ import streamlit as st
 from dotenv import load_dotenv, find_dotenv
 import pandas as pd
 import langchain
-import langchain-community
 import langchain_openai
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitter import RecursiveCharacterTextSplitter
