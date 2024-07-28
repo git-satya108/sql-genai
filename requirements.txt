@@ -15,3 +15,5 @@ plotly
 scikit-learn
 sqlalchemy
 werkzeug
+langchain-community
+langchain_openai
