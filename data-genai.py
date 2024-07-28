@@ -14,14 +14,17 @@ from langchain_openai import ChatOpenAI
 from sqlalchemy import create_engine
 from werkzeug.utils import secure_filename
 
+
+# Initialize OpenAI API client
+client = OpenAI()
+
 # Load OpenAI API key
 load_dotenv(find_dotenv(), override=True)
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 
-# Initialize OpenAI API client
-client = openai.Client()
+
 
 # Initialize session state for chat history
 if "chat_history" not in st.session_state:
