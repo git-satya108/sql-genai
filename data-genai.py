@@ -14,7 +14,9 @@ from werkzeug.utils import secure_filename
 
 # Load OpenAI API key
 load_dotenv(find_dotenv(), override=True)
-openai.api_key = os.getenv("OPENAI_API_KEY")
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
 
 # Initialize OpenAI API client
 client = openai.Client()
