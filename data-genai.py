@@ -4,13 +4,14 @@ import streamlit as st
 from dotenv import load_dotenv, find_dotenv
 import pandas as pd
 import langchain
-import langchain_community
+import langchain-community
+import langchain_openai
 from langchain_community.document_loaders import TextLoader
-from langchain_community.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.embeddings.openai import OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
-from langchain_community.chains import RetrievalQA
-from langchain_community.chat_models import ChatOpenAI
+from langchain.chains import RetrievalQA
+from langchain_openai import ChatOpenAI
 from sqlalchemy import create_engine
 from werkzeug.utils import secure_filename
 
