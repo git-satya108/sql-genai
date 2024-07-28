@@ -3,6 +3,7 @@ import openai
 import streamlit as st
 from dotenv import load_dotenv, find_dotenv
 import pandas as pd
+import langchain
 from langchain.document_loaders import TextLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.embeddings.openai import OpenAIEmbeddings
